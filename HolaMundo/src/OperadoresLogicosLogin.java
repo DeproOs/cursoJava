@@ -30,19 +30,23 @@ public class OperadoresLogicosLogin {
         boolean esAutoticado = false;
 
         for ( int i = 0; i < usernames.length; i++){
-            if(u.equals(usernames[i]) && p.equals(passwords[i])){
+            esAutoticado = u.equals(usernames[i]) && p.equals(passwords[i]) ? true : esAutoticado;
+
+            /*if(u.equals(usernames[i]) && p.equals(passwords[i])){
                 esAutoticado = true;
                 break;
-            }
+            }*/
         }
 
-        if(esAutoticado){
+        String mensaje = esAutoticado ? "Bienvenido usuario ".concat(u).concat("!") : "Username o password incorrectos!\nLo sentimos, requiere autenticación" ;
+        System.out.println(mensaje);
+        /*if(esAutoticado){
             System.out.println("Bienvenido usuario ".concat(u).concat("!"));
         }else{
             System.out.println("Username o password incorrectos!");
             System.out.println("Lo siento, requiere autenticación");
             main(args);
-        }
+        }*/
 
     }
 }
