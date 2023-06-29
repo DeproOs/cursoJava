@@ -1,16 +1,20 @@
 public class EjemploAutomovil {
     public static void main(String[] args) {
 
-        Automovil auto = new Automovil();
+        Automovil auto = new Automovil("Subaru", "Impreza");
 
-        auto.cilindrada = 2.0;
-        auto.color = "rojo";
-        auto.fabricante = "Subaru";
-        auto.modelo = "Impreza";
+        auto.setCilindrada( 2.0 );
+        auto.setColor( "rojo" );
 
-        System.out.println("auto.modelo = " + auto.modelo);
-        System.out.println("auto.fabricante = " + auto.fabricante);
-        System.out.println("auto.color = " + auto.color);
-        System.out.println("auto.cilindrada = " + auto.cilindrada);
+        System.out.println(auto.detalle());
+        System.out.println(auto.acelerar(150));
+        System.out.println(auto.frenar());
+        System.out.println(auto.acelerarFrenar(300));
+
+        System.out.println();
+
+        System.out.println("Kilómetros por litro: " + auto.calcularConsumo(300, 0.6f));
+
+        System.out.println("Kilómetros por litro: " + auto.calcularConsumo(300, 60));
     }
 }
