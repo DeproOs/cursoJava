@@ -16,5 +16,15 @@ public class EjemploAutomovil {
         System.out.println("Kilómetros por litro: " + auto.calcularConsumo(300, 0.6f));
 
         System.out.println("Kilómetros por litro: " + auto.calcularConsumo(300, 60));
+
+
+        Automovil nissan = new Automovil("Nissan", "Navara", "Gris oscuro", 3.5, 50);
+        Automovil nissan2 = new Automovil("Nissan", "Navara", "Gris oscuro", 3.5, 50);
+
+        System.out.println("son iguales? " + (nissan == nissan2));
+        System.out.println("son iguales? " + (nissan.equals(nissan2)));
+
+        System.out.println();
+        System.out.println(nissan2);
     }
 }
