@@ -4,7 +4,7 @@ public class EjemploAutomovil {
         Automovil auto = new Automovil("Subaru", "Impreza");
 
         auto.setCilindrada( 2.0 );
-        auto.setColor( "rojo" );
+        auto.setColor( Color.ROJO );
 
         System.out.println(auto.detalle());
         System.out.println(auto.acelerar(150));
@@ -18,8 +18,8 @@ public class EjemploAutomovil {
         System.out.println("Kilómetros por litro: " + auto.calcularConsumo(300, 60));
 
 
-        Automovil nissan = new Automovil("Nissan", "Navara", "Gris oscuro", 3.5, 50);
-        Automovil nissan2 = new Automovil("Nissan", "Navara", "Gris oscuro", 3.5, 50);
+        Automovil nissan = new Automovil("Nissan", "Navara", Color.GRIS, 3.5, 50);
+        Automovil nissan2 = new Automovil("Nissan", "Navara", Color.GRIS, 3.5, 50);
 
         System.out.println("son iguales? " + (nissan == nissan2));
         System.out.println("son iguales? " + (nissan.equals(nissan2)));
