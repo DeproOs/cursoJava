@@ -1,8 +1,8 @@
 public class EjemploAutomovilStatic {
     public static void main(String[] args) {
 
-        Automovil nissan = new Automovil("Nissan", "Navara", Color.GRIS, 3.5, 50);
-        Automovil nissan2 = new Automovil("Nissan", "Navara", Color.GRIS, 3.5, 50);
+        Automovil nissan = new Automovil("Nissan", "Navara", Color.GRIS, new Motor(3.5, TipoMotor.BENCINA), new Estanque(50));
+        Automovil nissan2 = new Automovil("Nissan", "Navara", Color.GRIS, new Motor(3.5, TipoMotor.BENCINA), new Estanque(50));
         nissan2.setTipo(TipoAutomovil.HATCHBACK);
 
         Automovil.setColorPatente("azul");

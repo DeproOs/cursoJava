@@ -2,11 +2,11 @@ public class EjemploAutomovilEnum {
     public static void main(String[] args) {
 
         Automovil subaru = new Automovil("subaru", "Impresa");
-        subaru.setCilindrada(2.0);
+        subaru.setMotor(new Motor(2.0, TipoMotor.BENCINA));
         subaru.setColor(Color.BLANCO);
         subaru.setTipo(TipoAutomovil.HATCHBACK);
 
-        Automovil mazda = new Automovil("Mazda", "BT-50", Color.ROJO, 3.0);
+        Automovil mazda = new Automovil("Mazda", "BT-50", Color.ROJO, new Motor(3.0, TipoMotor.BENCINA));
         mazda.setTipo(TipoAutomovil.PICKUP);
         System.out.println("mazda = " + mazda.getFabricante());
 
