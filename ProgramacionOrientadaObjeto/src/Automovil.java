@@ -8,6 +8,7 @@ public class Automovil {
     private Estanque estanque;
     private Persona conductor;
     private Rueda[] ruedas;
+    private int indiceRueds = 0;
 
     private TipoAutomovil tipo;
 
@@ -19,7 +20,7 @@ public class Automovil {
     public static final int VELOCIDAD_MAX_CIUDAD = 50;
 
     public static final String COLOR_ROJO = "Rojo";
-    public static final String COLOR_AMARILLO= "Amarillo";
+    public static final String COLOR_AMARILLO = "Amarillo";
     public static final String COLOR_AZUL = "Azul";
     public static final String COLOR_BLANCO = "Blanco";
     public static final String COLOR_GRIS = "Gris Oscuro";
@@ -27,6 +28,7 @@ public class Automovil {
 
     public Automovil() {
         this.id = ++ultimoId;
+        this.ruedas = new Rueda[5];
     }
 
     public Automovil(String fabricante) {
@@ -132,6 +134,13 @@ public class Automovil {
         this.ruedas = ruedas;
     }
 
+    public Automovil addRueda(Rueda rueda){
+        if(indiceRueds < this.ruedas.length) {
+            this.ruedas[indiceRueds++] = rueda;
+        }
+        return this;
+    }
+
     public TipoAutomovil getTipo() {
         return tipo;
     }
@@ -149,13 +158,28 @@ public class Automovil {
     }
 
     public String detalle() {
-        return "auto.modelo = " + this.modelo +
+        String detalle = "auto.modelo = " + this.modelo +
                 "\nauto.fabricante = " + this.fabricante +
                 "\nauto.color = " + this.color +
                 "\nauto.colorPatente = " + Automovil.colorPatente +
-                "\nauto.cilindrada = " + this.motor.getCilindrada()+
-                "\nauto.id = " + this.id +
-                "\nauto.tipo = "+ this.getTipo().getDescripcion();
+                "\nauto.cilindrada = " + this.motor.getCilindrada() +
+                "\nauto.id = " + this.id;
+        if (this.getTipo() != null){
+            detalle += "\nauto.tipo = " + this.getTipo().getDescripcion();
+        }
+
+        if (this.getConductor() != null){
+            detalle += "\nconductor Subaru = " + this.getConductor();
+        }
+
+        if (this.getRuedas() != null){
+            detalle +=  "\nruedas del automovil: ";
+            for(Rueda r: this.getRuedas()){
+                detalle += "\n" + r.getFabricante() + ", aro: " + r.getAro() + ", ancho: " + r.getAncho();
+            }
+        }
+
+        return detalle;
     }
 
     public String acelerar(int rpm) {
