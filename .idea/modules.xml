@@ -7,6 +7,7 @@
       <module fileurl="file://$PROJECT_DIR$/Matrices/Matrices.iml" filepath="$PROJECT_DIR$/Matrices/Matrices.iml" />
       <module fileurl="file://$PROJECT_DIR$/ProgramacionOrientadaObjeto/ProgramacionOrientadaObjeto.iml" filepath="$PROJECT_DIR$/ProgramacionOrientadaObjeto/ProgramacionOrientadaObjeto.iml" />
       <module fileurl="file://$PROJECT_DIR$/arreglos/arreglos.iml" filepath="$PROJECT_DIR$/arreglos/arreglos.iml" />
+      <module fileurl="file://$PROJECT_DIR$/paquetes/paquetes.iml" filepath="$PROJECT_DIR$/paquetes/paquetes.iml" />
     </modules>
   </component>
 </project>
