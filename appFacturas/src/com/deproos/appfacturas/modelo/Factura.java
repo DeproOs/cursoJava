@@ -79,7 +79,7 @@ public class Factura {
         sb.append("\n#\tNombre\t$\tCant.\tTotal\n");
         for (ItemFactura item : this.items) {
             if (item != null) {
-                sb.append(item).append("\n");
+                sb.append(item.toString()).append("\n");
             }
         }
 
