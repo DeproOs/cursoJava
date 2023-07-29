@@ -34,6 +34,7 @@ public class EjemploArregloNotasAlumnos {
         }
 
 
+
         double promedioMatematicas = sumNotasMatematicas / claseMatematicas.length;
         double promedioHistoria = sumNotasHistoria / claseHistoria.length;
         double promedioLenguaje = sumNotasLenguaje / claseLenguaje.length;
